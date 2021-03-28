@@ -1,0 +1,55 @@
+###############################################################################
+#                          Generated on phpdocker.io                          #
+###############################################################################
+version: "3.1"
+services:
+
+    mysql:
+      image: mysql:5.6
+
+      working_dir: /application
+      volumes:
+        - .:/application
+      environment:
+        - MYSQL_ROOT_PASSWORD=root
+        - MYSQL_DATABASE=wp_pentavite
+        - MYSQL_USER=wp_pentavite
+        - MYSQL_PASSWORD=wp_pentavite
+      ports:
+        - "1027:3306"
+
+    webserver:
+      image: nginx:alpine
+
+      working_dir: /application
+      volumes:
+          - .:/application
+          # - ./phpdocker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+          - ./phpdocker/nginx/nginx_full.conf:/etc/nginx/nginx.conf
+      ports:
+       - "8000:80"
+
+    php-fpm:
+      build: phpdocker/php-fpm
+
+      working_dir: /application
+      volumes:
+        - .:/application
+        - ./phpdocker/php-fpm/php-ini-overrides.ini:/etc/php5/fpm/conf.d/99-overrides.ini
+
+    phpmyadmin:
+      image: phpmyadmin/phpmyadmin:edge-4.8
+
+      working_dir: /application
+      ports:
+       - "8080:80"
+      links:
+       - mysql
+      environment:
+        - PMA_HOST=mysql
+
+    mailcatcher:
+      image: schickling/mailcatcher
+      ports:
+       - "1080:1080"
+       - "1025:1025"

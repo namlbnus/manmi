@@ -1,0 +1,448 @@
+@font-face {
+  font-family: San Francisco Display;
+  src: url("../font/SanFranciscoDisplay-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: UTM Androgyne;
+  src: url("../font/UTM-Androgyne.ttf") format("truetype");
+}
+@font-face {
+  font-family: Cambria;
+  src: url("../font/cambriab.ttf") format("truetype");
+}
+b {
+  display: none !important;
+}
+
+.full-width .ubermenu-nav, .container, .row {
+  max-width: 1200px;
+  margin: auto;
+}
+
+div#top-bar {
+  background: #F7B30C;
+}
+
+div#masthead {
+  background: #020000;
+  border-bottom: 2px solid #FFF500;
+}
+@media (min-width: 1400px) {
+  div#masthead #header-tel {
+    position: absolute;
+    right: 100px;
+  }
+}
+div#masthead #logo img {
+  max-height: 220px;
+  background: radial-gradient(#fff5002e, #fff50000);
+}
+div#masthead #logo a {
+  background: #020000;
+  padding: 0 35px 35px;
+  border-radius: 120px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+div#masthead #logo a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 56%;
+  border-bottom-left-radius: 120px;
+  border-bottom-right-radius: 120px;
+  border: 2px solid #FFF500;
+  border-top: 0;
+  bottom: -2px;
+}
+div#masthead .nav > li > a {
+  font-family: San Francisco Display, sans-serif;
+  font-size: 20px;
+}
+
+.hr1 {
+  position: relative;
+}
+.hr1 h1 {
+  font-size: 45px;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: San Francisco Display;
+}
+.hr1 .section-content, .hr1 .large-3, .hr1 .col-inner {
+  position: unset !important;
+}
+.hr1 div#hr1-slide {
+  position: absolute;
+  bottom: 60px;
+  width: 700px;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 25px 0 45px 90px;
+  border-bottom-left-radius: 40px;
+  border-top-left-radius: 40px;
+}
+.hr1 div#hr1-slide .tns-controls {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40%;
+}
+.hr1 div#hr1-slide .tns-controls button[data-controls=next] {
+  position: absolute;
+  right: 0;
+  z-index: 999;
+}
+.hr1 div#hr1-slide .tns-slide-active ~ .tns-slide-active:before {
+  content: "";
+  background: linear-gradient(#00000000, #000000b8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  z-index: 1;
+}
+.hr1 div#hr1-slide .item {
+  cursor: pointer;
+  position: relative;
+}
+.hr1 div#hr1-slide .item .image {
+  position: relative;
+}
+.hr1 div#hr1-slide .item .image img {
+  border-radius: 20px;
+}
+.hr1 div#hr1-slide .item .image:before {
+  content: "";
+  background: linear-gradient(#00000000, #000000b8);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+}
+.hr1 div#hr1-slide .item .box-text {
+  position: absolute;
+  bottom: 0;
+  width: 94%;
+  padding: 0 30px 15px;
+}
+.hr1 div#hr1-slide .item .box-text h4 {
+  font-size: 25px;
+  font-weight: 700;
+  font-family: "San Francisco Display";
+}
+.hr1 div#hr1-slide .item .box-text p {
+  font-family: "San Francisco Display";
+  font-size: 17px;
+}
+.hr1 div#hr1-slide .tns-nav {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  left: 0;
+}
+
+.tns-nav {
+  text-align: center;
+}
+.tns-nav button {
+  background: rgba(235, 173, 72, 0.35);
+  min-height: 8px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.tns-nav .tns-nav-active {
+  background: #DB9F3E !important;
+}
+
+.hr2 div#hero2-right {
+  text-align: center;
+  padding-top: 30px;
+}
+.hr2 div#hero2-right p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 30px;
+  font-family: San Francisco Display;
+  color: #FFEB81;
+  padding: 0px 20px;
+}
+.hr2:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: url("/wp-content/uploads/2021/03/Mask-Group.png");
+  z-index: 999;
+}
+
+.hr3 div#hero-3 {
+  text-align: center;
+}
+.hr3 div#hero-3 .item-content {
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.hr3 div#hero-3 .item-content .item-top {
+  position: relative;
+}
+.hr3 div#hero-3 .item-content .item-top .info-wrap {
+  position: absolute;
+  width: 100%;
+  bottom: 15px;
+}
+.hr3 div#hero-3 .item-content .item-top .info-wrap .info {
+  width: 90%;
+  margin: auto;
+  background: #fdfdfdcc;
+  border-radius: 30px;
+  padding: 5px 0 2px 0px;
+}
+.hr3 div#hero-3 .item-content .item-top .info-wrap .info span img {
+  position: relative;
+  bottom: 2px;
+  left: -5px;
+}
+.hr3 div#hero-3 .item-content .item-bottom {
+  padding: 10px 15px;
+  text-align: left;
+}
+.hr3 div#hero-3 .item-content .item-bottom h4 {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  font-size: 16px;
+  font-family: "San Francisco Display";
+  text-transform: uppercase;
+}
+.hr3 div#hero-3 .item-content .item-bottom p.sale-price {
+  font-size: 24px;
+  color: #F6B108;
+  font-weight: 700;
+  font-family: "San Francisco Display";
+  margin-bottom: unset;
+}
+.hr3 div#hero-3 .item-content .item-bottom p.regular-price {
+  font-size: 20px;
+  font-family: "San Francisco Display";
+  color: #BCA57F;
+  text-decoration: line-through;
+  text-decoration-color: #BCA57F;
+  margin-bottom: unset;
+}
+.hr3 .tns-controls {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 40%;
+}
+.hr3 .tns-controls button[data-controls=prev] {
+  position: absolute;
+  left: -80px;
+  z-index: 999;
+}
+.hr3 .tns-controls button[data-controls=next] {
+  position: absolute;
+  right: -80px;
+  z-index: 999;
+}
+.hr3 .tns-nav {
+  margin-top: 15px;
+}
+.hr3 div#hr3-slide {
+  margin-top: 25px;
+}
+
+.hr4 .bg-fill {
+  background-position: 0 -20px;
+}
+.hr4 .hr4-row {
+  max-width: 1000px;
+}
+.hr4 .title img {
+  width: 100%;
+}
+.hr4 .qualities .quality {
+  width: 50%;
+  text-align: center;
+  padding-top: 36px;
+}
+.hr4 .qualities .quality .title {
+  color: #7A4C00;
+  font-family: San Francisco Display;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin: 15px 0;
+}
+.hr4 .qualities .quality .desc {
+  font-size: 16px;
+  color: #7A4C00;
+  line-height: 26px;
+  font-family: San Francisco Display;
+}
+.hr4 .qualities .q-1, .hr4 .qualities .q-3 {
+  float: left;
+}
+.hr4 .qualities .q-2, .hr4 .qualities .q-4 {
+  position: relative;
+  float: right;
+  top: 65px;
+}
+.hr4 .hr4-right {
+  padding-top: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hr4 .hr4-right img {
+  max-width: 497px;
+}
+
+.hr5 .hr5-row {
+  max-width: 1000px;
+}
+.hr5 .hr5-row .hr5-left {
+  position: relative;
+}
+.hr5 .hr5-row .hr5-left:before {
+  content: "";
+  background: #FFEA94;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 25px;
+  z-index: -1;
+  top: 15px;
+  left: 15px;
+}
+.hr5 .hr5-row .hr5-right {
+  padding: 20px 0;
+}
+.hr5 .hr5-row .hr5-right img:last-child {
+  margin-top: 50px;
+}
+.hr5 .hr5-numbers .number-4 {
+  text-align: center;
+  margin-bottom: unset;
+}
+.hr5 .hr5-numbers .count {
+  font-size: 70px;
+  font-family: Cambria;
+  color: #FFB800;
+}
+.hr5 .hr5-numbers p {
+  text-align: center;
+  font-size: 20px;
+  font-family: UTM Androgyne;
+  color: #454545;
+}
+.hr5 .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hr5 .section-title span.section-title-main {
+  font-family: San Francisco Display;
+  color: #454545;
+}
+.hr5 #hr5-slide {
+  position: relative;
+  margin-top: 30px;
+}
+.hr5 #hr5-slide .tns-controls {
+  position: absolute;
+  width: 100%;
+  top: 40%;
+}
+.hr5 #hr5-slide .tns-controls button[data-controls=prev] {
+  position: absolute;
+  left: -100px;
+  z-index: 999;
+}
+.hr5 #hr5-slide .tns-controls button[data-controls=next] {
+  position: absolute;
+  right: -100px;
+  z-index: 999;
+}
+.hr5 #hr5-slide .item-center {
+  margin-top: 0 !important;
+}
+.hr5 #hr5-slide .item-center .item-content {
+  height: auto !important;
+}
+.hr5 #hr5-slide .item-center .item-content .item-bottom:before {
+  display: none;
+}
+.hr5 #hr5-slide .item {
+  margin-top: 40px;
+}
+.hr5 #hr5-slide .item-content {
+  background: #fff;
+  border-radius: 25px;
+  padding: 20px 30px;
+  box-shadow: 0px 0px 11px -4px;
+  height: 185px;
+  overflow: hidden;
+}
+.hr5 #hr5-slide .item-content .item-top {
+  display: flex;
+}
+.hr5 #hr5-slide .item-content .item-top .image {
+  width: 22%;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  box-shadow: 1px 1px 13px -2px;
+  overflow: hidden;
+}
+.hr5 #hr5-slide .item-content .item-top .info {
+  width: 76%;
+  padding: 10px 15px;
+}
+.hr5 #hr5-slide .item-content .item-top .info h4 {
+  font-size: 20px;
+  text-transform: uppercase;
+  line-height: 23px;
+  font-family: "San Francisco Display";
+  color: #FFB800;
+  margin-bottom: unset;
+}
+.hr5 #hr5-slide .item-content .item-top .info span {
+  font-size: 16px;
+  color: #050A37;
+  font-weight: 700;
+  font-family: "San Francisco Display";
+}
+.hr5 #hr5-slide .item-content .item-bottom {
+  position: relative;
+  margin-top: 10px;
+}
+.hr5 #hr5-slide .item-content .item-bottom:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: linear-gradient(#ffffff00, #ffffff);
+  left: 0;
+  bottom: 30px;
+}
+.hr5 #hr5-slide #tns2-iw {
+  padding: 5px;
+}
+
+#footer {
+  background: url(/wp-content/uploads/2021/03/footer-bg-1.png);
+}
+#footer .absolute-footer {
+  border-top: 1px solid #B8B8B8;
+  background-color: unset !important;
+}
+#footer .absolute-footer .copyright-footer {
+  color: #B8B8B8;
+}
